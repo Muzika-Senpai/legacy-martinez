@@ -74,6 +74,7 @@ html{
 
   scroll-behavior: smooth;
 
+
 }
 
 h1, h2, h3, h4, h5 {
@@ -106,8 +107,8 @@ body{
         
   background-color: $black-color;
   margin: 0 auto;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-  overflow-y: auto;  /* Allows vertical scrolling */
+
+
          
 }
 
@@ -127,7 +128,7 @@ body{
 
   position: -webkit-fixed !important;
   position: fixed !important;
-  bottom: 23% !important;
+  bottom: 10% !important;
   left: 2% !important;
   transition: all ease-in-out 0.5s;
   z-index: 9999;
@@ -137,6 +138,7 @@ body{
 .body-container{
     
   margin: 0 auto;
+
 
   header {
 
@@ -758,13 +760,16 @@ body{
   
   
     .body-container{
+
+      overflow-x: hidden; /* Prevents horizontal scrolling */
+      overflow-y: auto;  /* Allows vertical scrolling */
   
       header{
   
         .nav-bar-container{
   
           display: flex;
-          justify-content: space-around;
+          justify-content: space-between;
     
           .desktop-menu{
             display: none;
@@ -773,6 +778,9 @@ body{
           .mobile-menu{
 
             display: block;
+            position: fixed;
+            right: 20px;
+            z-index: 999999;
   
              /*///////////////// animated burger menu  ////////////////////*/
   
@@ -800,7 +808,7 @@ body{
   
               position: absolute;
               top: 100px;
-              right: 30px;
+              right: 0px;
               background-color: $white-color;
               font-size: 2em;
               height: 0;

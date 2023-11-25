@@ -82,8 +82,6 @@ h2:hover {
 body {
   background-color: #191919;
   margin: 0 auto;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-  overflow-y: auto; /* Allows vertical scrolling */
 }
 
 .opacity {
@@ -97,7 +95,7 @@ body {
 .to-top {
   position: -webkit-fixed !important;
   position: fixed !important;
-  bottom: 23% !important;
+  bottom: 10% !important;
   left: 2% !important;
   transition: all ease-in-out 0.5s;
   z-index: 9999;
@@ -480,15 +478,22 @@ body {
 }
 @media only screen and (max-width: 480px) {
   /*//////////////////////////////////////////////////////////*/
+  .body-container {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    overflow-y: auto; /* Allows vertical scrolling */
+  }
   .body-container header .nav-bar-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .body-container header .nav-bar-container .desktop-menu {
     display: none;
   }
   .body-container header .nav-bar-container .mobile-menu {
     display: block;
+    position: fixed;
+    right: 20px;
+    z-index: 999999;
     /*///////////////// animated burger menu  ////////////////////*/
   }
   .body-container header .nav-bar-container .mobile-menu .burger-menu-container {
@@ -508,7 +513,7 @@ body {
   .body-container header .nav-bar-container .mobile-menu .hidden-menu {
     position: absolute;
     top: 100px;
-    right: 30px;
+    right: 0px;
     background-color: #FFFFF0;
     font-size: 2em;
     height: 0;
