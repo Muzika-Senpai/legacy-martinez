@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5 {
 
 h2{
 
-  width: 30%;
+  width: 40%;
   padding: 5px;
 
 }
@@ -131,8 +131,27 @@ body{
   bottom: 10% !important;
   left: 2% !important;
   transition: all ease-in-out 0.5s;
-  z-index: 9999;
+  z-index: 10;
   
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9;
+}
+
+.enlarged-slide {
+  max-width: 80%; /* Adjust as needed */
+  max-height: 80vh; /* Adjust as needed */
+  z-index: 10;
 }
 
 .body-container{
@@ -148,6 +167,8 @@ body{
       align-items: center;
       justify-content: space-between;
       width: 100%;
+      padding: 10px;
+      height: 100px;
 
       .mobile-menu{
 
@@ -204,7 +225,7 @@ body{
         position: absolute;
         top: 30%;
         left: 5%;
-        z-index: 999;
+        z-index: 8;
 
         h1{
             font-size: 6rem;
@@ -217,6 +238,7 @@ body{
             font-size: 3rem;
             color: $white-color;
             margin: 1rem;
+            width: 100%;
             font-family: 'Archivo', sans-serif;
             background-color: transparent;
 
@@ -234,6 +256,7 @@ body{
       .background-img{
   
         width: 100%;
+        // max-height: 600px;
         z-index: 1;
 
         img{
@@ -281,7 +304,8 @@ body{
       color: $white-color;
       font-size: 3rem;
       margin: 0 auto;
-      margin-bottom: 50px;
+      margin-bottom: 80px;
+      width: 45%;
         
     }
 
@@ -294,7 +318,7 @@ body{
 
   #services{
 
-    padding: 50px;
+    padding: 80px;
     width: 100%;
     
   
@@ -305,7 +329,7 @@ body{
       margin: 0 auto;
       margin-bottom: 50px;
       background-color: $black-color;
-      width: 25%;
+      width: 30%;
       
     }
   
@@ -385,7 +409,7 @@ body{
       margin: 100px auto;
       margin-bottom: 50px;
       background-color: $darkred-color;
-      width: 25%;
+      width: 30%;
       text-transform: uppercase;
     
     }
@@ -394,8 +418,8 @@ body{
     //  /* Slider Container */
       .slider-container {
 
-      width: 70%;
-      margin: 0 auto 50px;
+      width: 90%;
+      margin: 100px auto 50px;
       overflow: hidden;
       position: relative;
       display: block;
@@ -416,7 +440,7 @@ body{
       min-width: 100%;
       box-sizing: border-box;
       display: flex;
-      justify-content: space-around;
+      // justify-content: space-around;
       align-items: center;
       position: relative;
 
@@ -425,9 +449,12 @@ body{
     // /* Image Styles */
     .slide img {
 
-      width: 20%;
-      max-height: 500px;
-      object-fit: cover;
+      width: 25%;
+     
+      aspect-ratio: 3/2;
+      mix-blend-mode: color-burn;
+      object-fit: contain;
+
       border-radius: 20px;
       height: auto;
       
@@ -506,14 +533,14 @@ body{
 
     }
 
-  }
+  }  
 
   ////////////////////////////* MAIN END *///////////////////////////////
 
   #contact{
 
     background-color: $darkred-color;
-    padding: 100px;
+    padding: 100px 25px;
 
     h2{
 
@@ -522,7 +549,7 @@ body{
       margin: 0 auto;
       margin-bottom: 50px;
       background-color: $black-color;
-      width: 25%;
+      width: 30%;
       text-transform: uppercase;
 
     }
@@ -537,10 +564,12 @@ body{
     align-items: center;
 
     padding: 25px;
+    
 
     .infos{
 
       width: 40%;
+      margin-left: 25px;
 
       h4{
         font-size: 2rem;
@@ -712,7 +741,7 @@ body{
 
     #contact{
 
-      padding: 100px 0;
+      padding: 100px 0px;
       margin-bottom: 50px;
       
 
@@ -778,9 +807,8 @@ body{
           .mobile-menu{
 
             display: block;
-            position: fixed;
             right: 20px;
-            z-index: 999999;
+            z-index: 11;
   
              /*///////////////// animated burger menu  ////////////////////*/
   
@@ -806,7 +834,7 @@ body{
   
             .hidden-menu{
   
-              position: absolute;
+              position: fixed;
               top: 100px;
               right: 0px;
               background-color: $white-color;
@@ -821,7 +849,7 @@ body{
               flex-direction: column;
               
               justify-content: center;  
-              z-index: 9999;
+              z-index: 9;
               transition: all 0.5s ease;
   
               ul{
@@ -900,6 +928,7 @@ body{
               width: 165px;
               opacity: 1;
               visibility: visible;
+              position: absolute;
   
             }
   

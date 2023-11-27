@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h2 {
-  width: 40%;
+  width: 30%;
   padding: 5px;
 }
 
@@ -98,26 +98,7 @@ body {
   bottom: 10% !important;
   left: 2% !important;
   transition: all ease-in-out 0.5s;
-  z-index: 10;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9;
-}
-
-.enlarged-slide {
-  max-width: 80%; /* Adjust as needed */
-  max-height: 80vh; /* Adjust as needed */
-  z-index: 10;
+  z-index: 9999;
 }
 
 .body-container {
@@ -132,8 +113,6 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 10px;
-  height: 100px;
 }
 .body-container header .nav-bar-container .mobile-menu {
   display: none;
@@ -166,7 +145,7 @@ body {
   position: absolute;
   top: 30%;
   left: 5%;
-  z-index: 8;
+  z-index: 999;
 }
 .body-container header .slogan .header-text h1 {
   font-size: 6rem;
@@ -177,7 +156,6 @@ body {
   font-size: 3rem;
   color: #FFFFF0;
   margin: 1rem;
-  width: 100%;
   font-family: "Archivo", sans-serif;
   background-color: transparent;
 }
@@ -217,15 +195,14 @@ body {
   color: #FFFFF0;
   font-size: 3rem;
   margin: 0 auto;
-  margin-bottom: 80px;
-  width: 45%;
+  margin-bottom: 50px;
 }
 .body-container .about-container p {
   color: #FFFFF0;
   font-size: 2rem;
 }
 .body-container #services {
-  padding: 80px;
+  padding: 50px;
   width: 100%;
   padding-bottom: 50px;
   background-color: #D3242B;
@@ -236,7 +213,7 @@ body {
   margin: 0 auto;
   margin-bottom: 50px;
   background-color: #191919;
-  width: 30%;
+  width: 25%;
 }
 .body-container #services .services-container {
   width: 100%;
@@ -290,12 +267,12 @@ body {
   margin: 100px auto;
   margin-bottom: 50px;
   background-color: #D3242B;
-  width: 30%;
+  width: 25%;
   text-transform: uppercase;
 }
 .body-container #gallery .slider-container {
-  width: 90%;
-  margin: 100px auto 50px;
+  width: 70%;
+  margin: 0 auto 50px;
   overflow: hidden;
   position: relative;
   display: block;
@@ -308,14 +285,14 @@ body {
   min-width: 100%;
   box-sizing: border-box;
   display: flex;
+  justify-content: space-around;
   align-items: center;
   position: relative;
 }
 .body-container #gallery .slide img {
-  width: 25%;
-  aspect-ratio: 3/2;
-  mix-blend-mode: color-burn;
-  object-fit: contain;
+  width: 20%;
+  max-height: 500px;
+  object-fit: cover;
   border-radius: 20px;
   height: auto;
 }
@@ -367,7 +344,7 @@ body {
 }
 .body-container #contact {
   background-color: #D3242B;
-  padding: 100px 25px;
+  padding: 100px;
 }
 .body-container #contact h2 {
   text-align: center;
@@ -375,7 +352,7 @@ body {
   margin: 0 auto;
   margin-bottom: 50px;
   background-color: #191919;
-  width: 30%;
+  width: 25%;
   text-transform: uppercase;
 }
 .body-container .map-container {
@@ -387,7 +364,6 @@ body {
 }
 .body-container .map-container .infos {
   width: 40%;
-  margin-left: 25px;
 }
 .body-container .map-container .infos h4 {
   font-size: 2rem;
@@ -483,7 +459,7 @@ body {
     width: 100%;
   }
   .body-container #contact {
-    padding: 100px 0px;
+    padding: 100px 0;
     margin-bottom: 50px;
   }
   .body-container #contact h2 {
@@ -515,8 +491,9 @@ body {
   }
   .body-container header .nav-bar-container .mobile-menu {
     display: block;
+    position: fixed;
     right: 20px;
-    z-index: 11;
+    z-index: 999999;
     /*///////////////// animated burger menu  ////////////////////*/
   }
   .body-container header .nav-bar-container .mobile-menu .burger-menu-container {
@@ -534,7 +511,7 @@ body {
     transition: all 0.5s ease;
   }
   .body-container header .nav-bar-container .mobile-menu .hidden-menu {
-    position: fixed;
+    position: absolute;
     top: 100px;
     right: 0px;
     background-color: #FFFFF0;
@@ -547,7 +524,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 9;
+    z-index: 9999;
     transition: all 0.5s ease;
   }
   .body-container header .nav-bar-container .mobile-menu .hidden-menu ul {
@@ -597,7 +574,6 @@ body {
     width: 165px;
     opacity: 1;
     visibility: visible;
-    position: absolute;
   }
   .body-container header .slogan img {
     height: 250px;
